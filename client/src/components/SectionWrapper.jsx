@@ -11,7 +11,7 @@ const SectionWrapper = ({ children }) => {
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="h-screen flex items-center justify-center overflow-hidden">
+      <div className="h-screen overflow-hidden">
         {children}
       </div>
     </motion.div>
