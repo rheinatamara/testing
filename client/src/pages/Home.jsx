@@ -28,7 +28,7 @@ function Home() {
 
   return (
     <div
-      className="flex flex-col min-h-screen bg-black/20 cursor-pointer w-full items-center justify-center overflow-clip"
+      className="flex flex-col min-h-[100dvh] bg-black/20 cursor-pointer w-full items-center justify-center overflow-clip"
       onClick={handleClick}
     >
       <div className="w-[90%] max-w-[400px] px-8">
