@@ -37,27 +37,28 @@ function Letter() {
       setPlaceholder(buttons.loading);
 
       try {
-        const response = await fetch(`${api.baseURL}${api.sendEmailEndpoint}`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            message: text,
-            score: `Score: ${emailData.score} out of ${emailData.totalQuestions}`,
-            drawings: emailData.drawings,
-          }),
-        });
+        // const response = await fetch(`${api.baseURL}${api.sendEmailEndpoint}`, {
+        //   method: "POST",
+        //   headers: {
+        //     "Content-Type": "application/json",
+        //   },
+        //   body: JSON.stringify({
+        //     message: text,
+        //     score: `Score: ${emailData.score} out of ${emailData.totalQuestions}`,
+        //     drawings: emailData.drawings,
+        //   }),
+        // });
 
-        if (response.ok) {
-          setText("");
-          setPlaceholder(config.letterPage.placeholder.success);
-          setTimeout(() => {
-            navigate("/closing");
-          }, 2000);
-        } else {
-          throw new Error("Failed to send email");
-        }
+        // if (response.ok) {
+        //   setText("");
+        //   setPlaceholder(config.letterPage.placeholder.success);
+        //   setTimeout(() => {
+        //     navigate("/closing");
+        //   }, 2000);
+        // } else {
+        //   throw new Error("Failed to send email");
+        // } // commented for demo purposes only
+        navigate("/closing");
       } catch (error) {
         console.error("Error sending email:", error);
         setPlaceholder(config.letterPage.placeholder.error);
