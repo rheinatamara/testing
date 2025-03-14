@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { SectionWrapper } from "../components";
 import config from "../config/config";
+import { motion } from "framer-motion";
+
 
 function Closing() {
   const imageFiles = import.meta.glob("../assets/gifs/*.gif");
@@ -19,9 +20,15 @@ function Closing() {
   }, [gifName]);
 
   return (
-    <div className="bg-black/20">
-      <SectionWrapper>
-        <div className="flex flex-col min-h-[100dvh] cursor-pointer w-full items-center justify-center overflow-clip">
+    <div className="flex flex-col min-h-[100dvh] bg-black/20 cursor-pointer w-full items-center justify-center overflow-clip">
+        <motion.div
+          className="w-full max-w-md mx-auto"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.8 }}
+        >
+        <div className="flex flex-col cursor-pointer w-full items-center justify-center overflow-clip">
           <div className="w-[90%] max-w-[400px] px-8">
             <div>
               {gifSrc && (
@@ -37,7 +44,7 @@ function Closing() {
             </div>
           </div>
         </div>
-      </SectionWrapper>
+      </motion.div>
     </div>
   );
 }
