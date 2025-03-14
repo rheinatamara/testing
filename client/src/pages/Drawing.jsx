@@ -57,7 +57,7 @@ function Drawing() {
 
   return (
     <SectionWrapper>
-      <div className="w-full max-w-3xl h-[calc(100vh-10rem)] flex flex-col bg-white rounded-lg shadow-lg relative">
+      <div className="w-full max-w-3xl h-[calc(100dvh-8rem)] flex flex-col bg-white rounded-lg shadow-lg relative">
         {loading && (
           <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-75 z-50">
             <div className="text-lg font-medium text-gray-700">

@@ -21,7 +21,7 @@ function Closing() {
   return (
     <div className="bg-black/20">
       <SectionWrapper>
-        <div className="flex flex-col cursor-pointer w-full items-center justify-center overflow-clip">
+        <div className="flex flex-col min-h-[100dvh] cursor-pointer w-full items-center justify-center overflow-clip">
           <div className="w-[90%] max-w-[400px] px-8">
             <div>
               {gifSrc && (

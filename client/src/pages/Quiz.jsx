@@ -47,7 +47,7 @@ function Quiz() {
   };
   const progress = (currentQuestion / questions.length) * 100;
   return (
-    <div className="min-h-screen bg-black/20 flex flex-col p-4 md:p-6">
+    <div className="min-h-[100dvh] bg-black/20 flex flex-col p-4 md:p-6">
       <motion.div
         className="w-full max-w-md mx-auto space-y-6"
         initial={{ opacity: 0, y: 30 }}
