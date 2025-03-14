@@ -33,7 +33,7 @@ app.post("/send-email", async (req, res) => {
 
     let mailOptions = {
       from: process.env.EMAIL_USER,
-      to: "your-email@gmail.com", // this is where you wish you get the letter, files and score data
+      to: process.env.EMAIL_USER, // this is where you wish you get the letter, files and score data
       subject: "Drawings and letter for you",
       text: `${message}\n\n${score}`,
       attachments: attachments,

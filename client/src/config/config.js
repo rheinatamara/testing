@@ -135,7 +135,7 @@ const config = {
     },
     // API configuration for sending emails
     api: {
-      baseURL: `http://localhost:3000`,
+      baseURL: `http://localhost:5000`,
       // Configure this based on your development port (check server/app.js or .env.PORT) and update this to your live backend URL after deployment
 
       sendEmailEndpoint: "/send-email", // Endpoint for sending emails
