@@ -5,10 +5,8 @@ const cors = require("cors");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-
-app.use(cors());
+app.use(cors({ origin: process.env.DEPLOYED_FRONTEND }));
 app.use(express.json({ limit: "10mb" }));
-
 app.post("/send-email", async (req, res) => {
   try {
     const { message, score, drawings } = req.body;
